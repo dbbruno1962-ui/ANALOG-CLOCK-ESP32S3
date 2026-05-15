@@ -11,10 +11,41 @@ static unsigned long last_poll_ms = 0;
 #define POLL_IDLE_MS    5000UL
 #define POLL_ACTIVE_MS  3000UL
 
-// Endpoint pubblico attuale
+/* =====================================
+   URLS
+===================================== */
 
-// Flag resolve inviato
 static bool endpoint_sent = false;
+
+static char idle_url[128];
+static char resolve_url[128];
+
+/* =====================================
+   INIT URLS
+===================================== */
+
+static void initNetURLs()
+{
+    snprintf(
+        idle_url,
+        sizeof(idle_url),
+        "https://www.giocando.net/%s/idle.php",
+        USER_FIN
+    );
+
+    snprintf(
+        resolve_url,
+        sizeof(resolve_url),
+        "https://www.giocando.net/%s/resolve.php?id=esp_0aef2c",
+        USER_FIN
+    );
+
+    Serial.print("[NET] idle: ");
+    Serial.println(idle_url);
+
+    Serial.print("[NET] resolve: ");
+    Serial.println(resolve_url);
+}
 
 /* =====================================
    SEND ENDPOINT TO SERVER
@@ -22,7 +53,8 @@ static bool endpoint_sent = false;
 
 void sendEndpointToServer()
 {
-    if (!isWiFiConnected()) return;
+    if (!isWiFiConnected())
+        return;
 
     WiFiClientSecure client;
     client.setInsecure();
@@ -30,12 +62,12 @@ void sendEndpointToServer()
     HTTPClient http;
     http.setTimeout(5000);
 
-    String url =
-    "https://www.giocando.net/emilia/resolve.php?id=esp_0aef2c";
+    http.begin(client, resolve_url);
 
-    http.begin(client, url);
-
-    http.setAuthorization(poll_name, poll_psw);
+    http.setAuthorization(
+        poll_name,
+        poll_psw
+    );
 
     int code = http.GET();
 
@@ -51,12 +83,24 @@ void sendEndpointToServer()
 
 void net_update()
 {
-    if (!isWiFiConnected()) {
+    static bool init_done = false;
+
+    if (!init_done)
+    {
+        initNetURLs();
+        init_done = true;
+    }
+
+    if (!isWiFiConnected())
+    {
         endpoint_sent = false;
         return;
     }
 
-    // Invia endpoint una sola volta dopo connessione WiFi
+    /* =====================================
+       SEND ENDPOINT ONCE
+    ===================================== */
+
     if (!endpoint_sent)
     {
         sendEndpointToServer();
@@ -65,10 +109,13 @@ void net_update()
 
     unsigned long now = millis();
 
-    unsigned long interval = cameraIsActive() ? POLL_ACTIVE_MS
-                                              : POLL_IDLE_MS;
+    unsigned long interval =
+        cameraIsActive()
+        ? POLL_ACTIVE_MS
+        : POLL_IDLE_MS;
 
-    if (now - last_poll_ms < interval) return;
+    if (now - last_poll_ms < interval)
+        return;
 
     last_poll_ms = now;
 
@@ -78,15 +125,19 @@ void net_update()
     HTTPClient http;
     http.setTimeout(5000);
 
-    http.begin(client, "https://www.giocando.net/emilia/idle.php");
+    http.begin(client, idle_url);
 
-    http.setAuthorization(poll_name, poll_psw);
+    http.setAuthorization(
+        poll_name,
+        poll_psw
+    );
 
     int code = http.GET();
 
     if (code == 200)
     {
         String cmd = http.getString();
+
         cmd.trim();
 
         Serial.print("[POLL] CMD: ");

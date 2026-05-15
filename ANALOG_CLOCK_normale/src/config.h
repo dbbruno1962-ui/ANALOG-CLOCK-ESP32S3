@@ -37,19 +37,19 @@
  * ===================================================== */
 
 #ifdef USER_FIN_EMILIA
-#define USER_FIN "Emilia"
+#define USER_FIN "emilia"
 #endif
 
 #ifdef USER_FIN_ANTONELLA
-#define USER_FIN "Antonella"
+#define USER_FIN "antonella"
 #endif
 
 #ifdef USER_FIN_TOMMASO
-#define USER_FIN "Tommaso"
+#define USER_FIN "tommaso"
 #endif
 
 #ifdef USER_FIN_BRUNO
-#define USER_FIN "Bruno"
+#define USER_FIN "bruno"
 #endif
 
 // ================= CAMERA PIN DEDICATED =================
