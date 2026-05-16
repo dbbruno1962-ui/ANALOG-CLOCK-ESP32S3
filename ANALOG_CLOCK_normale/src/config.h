@@ -7,6 +7,7 @@
 /* =====================================================
  * PINOUT TFT
  * ===================================================== */
+
 #define LCD_CS   14
 #define LCD_RST  21
 #define LCD_DC   47
@@ -26,30 +27,61 @@
 /* =====================================================
  * USER PROFILE
  * ===================================================== */
-
+#define SERVER_HOST "www.giocando.net"
 //#define USER_FIN_EMILIA
 #define USER_FIN_ANTONELLA
 //#define USER_FIN_TOMMASO
 //#define USER_FIN_BRUNO
 
 /* =====================================================
- * USER DISPLAY NAME
+ * USER CONFIG
  * ===================================================== */
 
 #ifdef USER_FIN_EMILIA
-#define USER_FIN "emilia"
+
+    #define USER_FIN            "emilia"
+
+    #define DEVICE_ID           "esp_clock_emilia"
+
+    #define STREAM_PORT_LOCAL   81
+    #define STREAM_PORT_PUBLIC  25402
+
 #endif
+
 
 #ifdef USER_FIN_ANTONELLA
-#define USER_FIN "antonella"
+
+    #define USER_FIN            "antonella"
+
+    #define DEVICE_ID           "esp_clock_antonella"
+
+    #define STREAM_PORT_LOCAL   82
+    #define STREAM_PORT_PUBLIC  25401
+
 #endif
+
 
 #ifdef USER_FIN_TOMMASO
-#define USER_FIN "tommaso"
+
+    #define USER_FIN            "tommaso"
+
+    #define DEVICE_ID           "esp_clock_tommaso"
+
+    #define STREAM_PORT_LOCAL   83
+    #define STREAM_PORT_PUBLIC  25403
+
 #endif
 
+
 #ifdef USER_FIN_BRUNO
-#define USER_FIN "bruno"
+
+    #define USER_FIN            "bruno"
+
+    #define DEVICE_ID           "esp_clock_bruno"
+
+    #define STREAM_PORT_LOCAL   84
+    #define STREAM_PORT_PUBLIC  25404
+
 #endif
 
 // ================= CAMERA PIN DEDICATED =================

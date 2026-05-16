@@ -16,8 +16,9 @@
 ===================================== */
 static bool cam_active = false;
 static bool cam_initialized = false;
-static WebServer camServer(81);
-
+static WebServer camServer(
+    STREAM_PORT_LOCAL
+);
 /* =====================================
    CAMERA CONFIG
 ===================================== */
@@ -194,7 +195,13 @@ bool cameraStart(void)
 
   camServer.begin();
 
-  Serial.println("[CAM] server started on 81");
+  Serial.print(
+    "[CAM] server started on "
+);
+
+Serial.println(
+    STREAM_PORT_LOCAL
+);
 
   return true;
 }

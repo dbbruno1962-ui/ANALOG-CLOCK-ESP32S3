@@ -29,16 +29,19 @@ static void initNetURLs()
     snprintf(
         idle_url,
         sizeof(idle_url),
-        "https://www.giocando.net/%s/idle.php",
+        "https://" SERVER_HOST "/%s/idle.php",
         USER_FIN
     );
 
     snprintf(
-        resolve_url,
-        sizeof(resolve_url),
-        "https://www.giocando.net/%s/resolve.php?id=esp_0aef2c",
-        USER_FIN
-    );
+    resolve_url,
+    sizeof(resolve_url),
+    "https://%s/%s/resolve.php?id=%s&port=%d",
+    SERVER_HOST,
+    USER_FIN,
+    DEVICE_ID,
+    STREAM_PORT_PUBLIC
+);
 
     Serial.print("[NET] idle: ");
     Serial.println(idle_url);
