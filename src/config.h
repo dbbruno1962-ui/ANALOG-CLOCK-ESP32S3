@@ -27,7 +27,7 @@
 /* =====================================================
  * USER PROFILE
  * ===================================================== */
-#define SERVER_HOST "www.giocando.net"
+#define SERVER_HOST "YourHOST"
 #define USER_FIN_EMILIA
 //#define USER_FIN_ANTONELLA
 //#define USER_FIN_TOMMASO
