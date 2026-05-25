@@ -53,7 +53,7 @@ Porta: COM9, variabile in base al PC
 - USB DFU On Boot: Disabled
 - Erase All Flash Before Sketch Upload: Disabled (*)
 - Events Run On: Core 1
-- Flash Mode: QIO 80MHz
+- Flash Mode: DIO 80MHz
 - Flash Size: 16MB (128Mb)
 - JTAG Adapter: Integrated USB JTAG
 - Arduino Runs On: Core 1
