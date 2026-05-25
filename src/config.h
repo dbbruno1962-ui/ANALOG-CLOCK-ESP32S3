@@ -121,7 +121,7 @@
 #define GMT_OFFSET_SEC      3600
 #define DAYLIGHT_OFFSET_SEC 3600
 #define poll_name "pooleer"
-#define poll_psw  "Alfanum563098"
+#define poll_psw  "your_long_password"
 
 
 /* ========= DISPLAY / LAYOUT POLICY =================== */
