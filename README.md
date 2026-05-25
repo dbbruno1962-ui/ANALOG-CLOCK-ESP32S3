@@ -28,8 +28,6 @@ LVGL è fissata alla versione 8.3.0: versioni più recenti possono richiedere mo
 
 - LVGL: 8.3.0
 - ESP32 by Espressif Systems: 3.3.5
-- LVGL: 8.3.0
-- ESP32 by Espressif Systems: 3.3.5
 
 #### Configurazione board
 
