@@ -2,7 +2,7 @@
 Progetto di orologio basato su ESP32S3 dev module, display tft sensore dht11 cam ov.....
 l'hardware è composto da MCU Goouuu con zif cam integrata e brekboard Goouuu, display ILI9488_18bit
 MA IL CONGIG.H è COMPLETAMENTE PERSONALIZZABILE A SECONDA DELL'HARDWARE CHE VOLETE UTILIZZARE
-non è sicuramente adattabile ad una normale Esp32 non S£, a meno di modificare il processo utilizzandone
+non è sicuramente adattabile ad una normale Esp32 non S3, a meno di modificare il processo utilizzandone
 più di 2 e ripartendo i processi, ma l'attuale progetto prevede l'utilizzo di un cloud simulato su hostweb linux
 quindi anche adattabile a più periferiche, in seguito aggiungerò anche i php necessari
 Hardware utilizzato:
