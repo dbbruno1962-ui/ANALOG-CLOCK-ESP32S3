@@ -11,7 +11,7 @@ da Temu:
 ![Breakboard Goouuu e ESP32s3 wrooom ](hardware Goouuu.jpg)
 
 io ho montato un 3.5 pollici, ma la resa effettivamente migliore è con un 
-4 pollici https://it.aliexpress.com/item/1005008871784622.html?spm=a2g0o.order_list.order_list_main.68.5f903696zqTUv6&gatewayAdapt=glo2ita
+4 pollici sia su Temu che Aliexpress ce ne sono a dozzine
 ![TFT 4 Pollici](Hard_Display.jpg)
 
 ## Anteprime
