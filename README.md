@@ -8,7 +8,7 @@ più di 2 e ripartendo i processi, ma l'attuale progetto prevede l'utilizzo di u
 quindi anche adattabile a più periferiche, in seguito aggiungerò anche i php necessari
 Hardware utilizzato:
 da Temu: 
-![Breakboard Goouuu e ESP32s3 wrooom ](hardware Goouuu.jpg)
+![Breakboard Goouuu e ESP32s3 wrooom ](hardware_Goouuu.jpg)
 
 io ho montato un 3.5 pollici, ma la resa effettivamente migliore è con un 
 4 pollici sia su Temu che Aliexpress ce ne sono a dozzine
