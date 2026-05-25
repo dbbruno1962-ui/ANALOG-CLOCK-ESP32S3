@@ -11,6 +11,16 @@ https://www.temu.com/goods.html?_bg_fs=1&goods_id=601103835226651&parent_order_s
 io ho montato un 3.5 pollici, ma la resa effettivamente migliore è con un 
 4 pollici https://it.aliexpress.com/item/1005008871784622.html?spm=a2g0o.order_list.order_list_main.68.5f903696zqTUv6&gatewayAdapt=glo2ita
 
+## Anteprime
+
+### Display 3.5 pollici
+
+![Clock su display 3.5 pollici](3_5_Pollici.jpeg)
+
+### Display 4 pollici
+
+![Clock su display 4 pollici](4_Pollici.jpeg)
+
 ## UI
 
 La UI usa LVGL 8.3.0 con quadrante analogico personalizzabile tramite asset grafici.
