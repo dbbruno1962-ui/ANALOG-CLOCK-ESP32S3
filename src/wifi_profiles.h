@@ -12,20 +12,20 @@ static const WiFiProfile wifi_profiles[] =
 {
     {
         "Casa",
-        "Vodafone-48402720",
-        "Alligatore1"
+        "YourSSID",
+        "YourPASSW"
     },
 
     {
         "Android",
-        "BrunoPhone",
-        "Alligatore1"
+        "YourSSID",
+        "YourPASSW"
     },
 
     {
         "Hotspot",
-        "G4-CPE-7B65",
-        "12345678"
+        "YourSSID",
+        "YourPASSW"
     }
 };
 
